@@ -21,10 +21,6 @@ private:
         return parent_index * 2 + 2;
     }
 
-    static inline size_t parent_index(size_t child_index) {
-        return (child_index - 1) / 2;
-    }
-
     void construct(size_t node_index, size_t start_index, size_t end_index) {
         if (start_index == end_index) {
             tree[node_index] = origin[start_index];

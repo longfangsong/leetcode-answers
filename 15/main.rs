@@ -19,10 +19,6 @@ fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut right = sorted_.len() - 1;
         while left < right {
             let sum = sorted_[i] + sorted_[left] + sorted_[right];
-            println!(
-                "{},{},{},{},{}",
-                i, sorted_[i], sorted_[left], sorted_[right], sum
-            );
             if sum == 0 {
                 result.push(vec![sorted_[i], sorted_[left], sorted_[right]]);
                 while left < right && sorted_[left] == sorted_[left + 1] {

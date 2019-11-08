@@ -7,7 +7,6 @@ private:
   void backtrack(vector<vector<int>> &result, vector<int> &current_result,
                  const vector<int> &candidates, int current_result_value,
                  const int target, size_t start_from) {
-    cout << "sf: " << start_from << endl;
     for (size_t index = start_from; index < candidates.size(); ++index) {
       auto i = candidates[index];
       if (current_result_value + i < target) {
@@ -18,10 +17,6 @@ private:
       } else if (current_result_value + i == target) {
         current_result.push_back(i);
         result.push_back(current_result);
-        for (auto &&e : current_result) {
-          cout << e << ',';
-        }
-        cout << endl;
         current_result.pop_back();
         break;
       } else {
